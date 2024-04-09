@@ -31,19 +31,13 @@ $(document).ready(function () {
     // });
 
 
-    // $('.mobmenu').click(function () {
-    //     $('.mobmenusect').addClass('showmenu');
-    // })
+    $('.menubtn').click(function () {
+        $('.header__menuwrap ul').toggleClass('showmenu');
+    })
 
-    // $('.closemenu').click(function () {
-    //     $('.mobmenusect').removeClass('showmenu');
-    // })
-
-    // $('.header.header nav ul li a').click(function(){
-    //     $('.mobmenusect').removeClass('showmenu');
-    // });
-
-
+    $('.header.header nav ul li a').click(function(){
+        $('.header__menuwrap ul').removeClass('showmenu');
+    });
 
     // accordeon
     const accordeonFields = document.querySelectorAll('.accordeonfield');
@@ -71,9 +65,6 @@ $(document).ready(function () {
         });
     });
 
-
-
-
     // slider
     var swiper = new Swiper(".mySwiper", {
         slidesPerView: 2.5,
@@ -84,16 +75,23 @@ $(document).ready(function () {
         },
 
         breakpoints: {
-            320: {
-
+            576: {
+                slidesPerView: 1.2,
+                spaceBetween: 20,
             },
             768: {
-
+                slidesPerView: 1.4,
+                spaceBetween: 20,
+            },
+            992: {
+                slidesPerView: 1.8,
+                spaceBetween: 30,
             },
             1024: {
-
+                slidesPerView: 2.1,
+                spaceBetween: 30,
             },
-            1500: {
+            1400: {
                 slidesPerView: 2.5,
                 spaceBetween: 40,
             },
@@ -117,7 +115,13 @@ $(document).ready(function () {
     });
 
 
-
+    // to top
+    $(".totop").on("click", function (event) {
+        event.preventDefault();
+        var id = $(this).attr('href'),
+            top = $(id).offset().top - 100;
+        $('body,html').animate({ scrollTop: top }, 800);
+    });
 
 
 

@@ -23,7 +23,12 @@ header.header {
         backdrop-filter: blur(10px);
         list-style: none;
         text-align: center;
-        display: none;
+        opacity: 0;
+        z-index: -1;
+        visibility: hidden;
+        transition: 0.5s;
+        animation-timing-function: ease-in-out;
+        transform: translateX(30px);
 
         li {
             margin-bottom: 30px;
@@ -44,6 +49,13 @@ header.header {
                 line-height: 135%;
             }
         }
+
+        &.showmenu {
+            opacity: 1;
+            z-index: 4;
+            visibility: visible;
+            transform: translateX(0);
+        }
     }
 
     &.scrollheader {
@@ -54,6 +66,10 @@ header.header {
 
 .header__logo {
     max-width: 100%;
+
+    img {
+        max-width: 100%;
+    }
 }
 
 .header__menuwrap {
@@ -68,3 +84,21 @@ header.header {
     img {}
 }
 
+@media(max-width:767.8px) {
+    .menubtn {
+        img {
+            width: 70px;
+        }
+    }
+
+    .header__logo img {
+        max-width: 80px;
+    }
+}
+
+@media(max-width:575.8px) {
+    header.header,
+    header.header.scrollheader {
+        padding: 0;
+    }
+}

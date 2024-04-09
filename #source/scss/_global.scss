@@ -101,13 +101,15 @@ h3 {
     color: #fff;
     background: #004FEA;
     border-radius: 30px;
-    min-height: 63px;
+    min-height: 61px;
     min-width: 260px;
     padding: 4px 15px;
     transition: 0.3s;
+    border: 1px solid #004FEA;
 
     &:hover {
-        color: #fff;
+        color: #004FEA;
+        background: #fff;
     }
 }
 
@@ -119,4 +121,38 @@ input::-webkit-inner-spin-button {
 
 input[type=number] {
     -moz-appearance: textfield;
+}
+
+@media(max-width:1599.8px) {
+
+    h1 {
+        font-size: 54px;
+    }
+
+    h2, h3 {
+        font-size: 42px;
+    }
+}
+
+@media(max-width:991.8px) {
+
+    h2, h3 {
+        font-size: 36px;
+    }
+}
+
+@media(max-width:767.8px) {
+    h1 {
+        font-size: 42px;
+    }
+
+    h2, h3 {
+        font-size: 32px;
+    }
+}
+
+@media(max-width:575.8px) {
+    h1 {
+        font-size: 36px;
+    }
 }
