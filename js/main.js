@@ -1,5 +1,9 @@
 
 $(document).ready(function () {
+    AOS.init({
+        duration: 1000,
+    });
+
     // header
     $(window).scroll(function () {
         if ($(this).scrollTop() > 20) {
@@ -16,19 +20,19 @@ $(document).ready(function () {
     }
 
     // scroll
-    // $("header.header nav ul").on("click", "a", function (event) {
-    //     event.preventDefault();
-    //     var id = $(this).attr('href'),
-    //         top = $(id).offset().top - 100;
-    //     $('body,html').animate({ scrollTop: top }, 800);
-    // });
+    $("header.header ul").on("click", "a", function (event) {
+        event.preventDefault();
+        var id = $(this).attr('href'),
+            top = $(id).offset().top - 80;
+        $('body,html').animate({ scrollTop: top }, 800);
+    });
 
-    // $("footer ul").on("click", "a", function (event) {
-    //     event.preventDefault();
-    //     var id = $(this).attr('href'),
-    //         top = $(id).offset().top - 100;
-    //     $('body,html').animate({ scrollTop: top }, 800);
-    // });
+    $("footer.footer nav ul").on("click", "a", function (event) {
+        event.preventDefault();
+        var id = $(this).attr('href'),
+            top = $(id).offset().top - 80;
+        $('body,html').animate({ scrollTop: top }, 800);
+    });
 
 
     $('.menubtn').click(function () {
@@ -75,6 +79,11 @@ $(document).ready(function () {
         },
 
         breakpoints: {
+            320: {
+                slidesPerView: 1.2,
+                spaceBetween: 20,
+            },
+
             576: {
                 slidesPerView: 1.2,
                 spaceBetween: 20,

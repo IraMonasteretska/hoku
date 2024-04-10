@@ -216,3 +216,36 @@ footer.footer {
         font-size: 15px;
     }
 }
+
+@media(max-width:575.8px) {
+    .footer__top {
+        .f3 {
+            padding-top: 20px;
+            .text-end {
+                text-align: left !important;
+            }
+        }
+    }
+
+    footer.footer nav ul {
+        text-align: left;
+
+        li {
+            margin-bottom: 15px;
+        }
+    }
+
+    footer.footer .footer__top {
+        padding-bottom: 20px;
+    }
+
+    .footer__logo {
+        text-align: center;
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .footer__bott p {
+        margin-bottom: 20px;
+    }
+}
