@@ -1,11 +1,14 @@
 header.header {
-    position: fixed;
+    position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     z-index: 12;
     padding: 18px 0;
     transition: 0.5s;
+    height: 120px;
+    display: flex;
+    align-items: center;
 
     nav {
         position: relative;
@@ -89,6 +92,12 @@ header.header {
     max-height: calc(100vh - 100px);
 }
 
+.fixedel {
+    position: fixed;
+    right: 0;
+    top: 18px;
+}
+
 @media(max-width:767.8px) {
     .menubtn {
         img {
@@ -99,6 +108,10 @@ header.header {
     .header__logo img {
         max-width: 80px;
     }
+
+    header.header {
+        height: 100px;
+    }
 }
 
 @media(max-width:575.8px) {
@@ -107,8 +120,12 @@ header.header {
         padding: 0;
     }
 
-  
+    header.header {
+        height: 70px;
+    }
 
-
+    .fixedel {
+        top: 0;
+    }
 
 }
