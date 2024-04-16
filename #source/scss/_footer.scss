@@ -1,15 +1,13 @@
 footer.footer {
-    padding: 55px 0 20px;
-    background: #0E1626;
+    padding: 75px 0;
+    background: rgba(14, 22, 38, 1);
+    position: relative;
+    z-index: 4;
 
     .soclist {
         margin-top: 0;
-    }
-
-    .footer__top {
-        padding-bottom: 50px;
-        border-bottom: 1px solid rgba(#fff, 0.05);
-
+        display: inline-block;
+        vertical-align: middle;
     }
 
     .footeradress {
@@ -72,17 +70,20 @@ footer.footer {
             }
         }
     }
-}
 
-.footer__bott {
-    padding-top: 34px;
-
-    p {
+    .f2 p {
         text-align: center;
-        margin: 0;
-        color: #8DA1C1;
-        font-size: 15px;
-        line-height: 150%;
+        color: rgba(202, 216, 237, 1);
+    }
+
+    .soclist li a {
+        width: 40px;
+        height: 40px;
+        background: rgba(53, 170, 249, 1);
+    }
+
+    .soclist li a img {
+        width: 27px;
     }
 }
 
@@ -102,11 +103,15 @@ footer.footer {
     height: 50px;
     border-radius: 50%;
     background: #f4f4f4;
+    vertical-align: middle;
+    margin-left: 47px;
 
     img {
         max-width: 28px;
     }
 }
+
+
 
 @media(max-width:1399.8px) {
     footer.footer nav ul li {
@@ -167,17 +172,25 @@ footer.footer {
 @media(max-width:991.8px) {
 
     .footer__top {
-        .f1 {
-            order: 1;
-        }
+        // .f1 {
+        //     order: 1;
+        // }
 
-        .f2 {
-            order: 3;
-        }
+        // .f2 {
+        //     order: 3;
+        // }
 
-        .f3 {
-            order: 2;
-        }
+        // .f3 {
+        //     order: 2;
+        // }
+    }
+
+    .totop {
+        margin-left: 30px;
+    }
+
+    footer.footer .soclist li a {
+        width: 50px;
     }
 
     footer.footer .footeradress .contic,
@@ -215,6 +228,8 @@ footer.footer {
     footer.footer .footeradress .text {
         font-size: 15px;
     }
+
+   
 }
 
 @media(max-width:575.8px) {
@@ -222,7 +237,7 @@ footer.footer {
         .f3 {
             padding-top: 20px;
             .text-end {
-                text-align: left !important;
+                text-align: center !important;
             }
         }
     }
@@ -248,4 +263,10 @@ footer.footer {
     .footer__bott p {
         margin-bottom: 20px;
     }
+
+    footer.footer {
+        padding: 60px 0 50px;
+    }
+
+
 }
